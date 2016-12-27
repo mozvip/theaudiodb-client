@@ -18,6 +18,7 @@ public class AudioDbAlbum {
 	private String strAmazonID;
 	private String strArtist;
 
+	private String strDescription;
 	private String strDescriptionCN;
 	private String strDescriptionDE;
 	private String strDescriptionEN;
@@ -166,6 +167,14 @@ public class AudioDbAlbum {
 
 	public void setStrArtist(String strArtist) {
 		this.strArtist = strArtist;
+	}
+
+	public String getStrDescription() {
+		return strDescription;
+	}
+
+	public void setStrDescription(String strDescription) {
+		this.strDescription = strDescription;
 	}
 
 	public String getStrDescriptionCN() {
