@@ -10,6 +10,9 @@ public class TheAudioDbClient {
 	
 	public static final class Builder {
 		
+		private Builder() {
+		}
+		
 		private String apiKey = "1";
 		
 		public Builder apiKey( String apiKey ) {
