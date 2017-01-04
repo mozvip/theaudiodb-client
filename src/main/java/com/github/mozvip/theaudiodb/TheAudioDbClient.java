@@ -1,8 +1,9 @@
-package fr.mozvip.theaudiodb;
+package com.github.mozvip.theaudiodb;
 
 import java.io.IOException;
 
-import fr.mozvip.theaudiodb.model.AudioDbResponse;
+import com.github.mozvip.theaudiodb.model.AudioDbResponse;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 

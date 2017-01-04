@@ -1,11 +1,11 @@
+package com.github.mozvip.theaudiodb;
 
 
 import java.io.IOException;
 
 import org.junit.Test;
 
-import fr.mozvip.theaudiodb.TheAudioDbClient;
-import fr.mozvip.theaudiodb.model.AudioDbResponse;
+import com.github.mozvip.theaudiodb.model.AudioDbResponse;
 
 public class TheAudioDBTest {
 	

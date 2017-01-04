@@ -1,6 +1,7 @@
-package fr.mozvip.theaudiodb;
+package com.github.mozvip.theaudiodb;
 
-import fr.mozvip.theaudiodb.model.AudioDbResponse;
+import com.github.mozvip.theaudiodb.model.AudioDbResponse;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;

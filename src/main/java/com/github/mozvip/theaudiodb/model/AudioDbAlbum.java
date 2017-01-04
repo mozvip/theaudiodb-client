@@ -1,4 +1,4 @@
-package fr.mozvip.theaudiodb.model;
+package com.github.mozvip.theaudiodb.model;
 
 public class AudioDbAlbum {
 
