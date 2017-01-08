@@ -4,12 +4,38 @@
 	<groupId>com.github.mozvip</groupId>
 	<artifactId>theaudiodb-client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<name>theaudiodb-client</name>
+	<description>A client for the theaudiodb.com API</description>
+	<url>https://github.com/mozvip/theaudiodb-client</url>
+	<scm>
+		<url>https://github.com/mozvip/theaudiodb-client.git</url>
+		<developerConnection>Guillaume Serre - guillaume.serre@gmail.com</developerConnection>
+	</scm>
 	<distributionManagement>
 		<snapshotRepository>
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
 	</distributionManagement>
+	<developers>
+		<developer>
+			<id>mozvip</id>
+			<name>Guillaume Serre</name>
+			<email>guillaume.serre@gmail.com</email>
+			<url>https://github.com/mozvip</url>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>Apache-2.0</name>
+			<url>https://opensource.org/licenses/Apache-2.0</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 	<build>
 		<plugins>
 			<plugin>
@@ -30,6 +56,32 @@
 					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
