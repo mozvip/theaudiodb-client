@@ -2,6 +2,7 @@ package com.github.mozvip.theaudiodb;
 
 
 import java.io.IOException;
+import java.util.Optional;
 
 import org.junit.Test;
 
@@ -13,8 +14,8 @@ public class TheAudioDBTest {
 
 	@Test
 	public void testSearchAlbum() throws IOException {
-		AudioDbResponse response = client.searchAlbum("Sia", "1000 Forms of Fear");
-		assert(response.getAlbum().size() == 1);
+		Optional<AudioDbResponse> response = client.searchAlbum("Sia", "1000 Forms of Fear");
+		assert(response.isPresent());
 	}
 
 	@Test

@@ -1,6 +1,7 @@
 package com.github.mozvip.theaudiodb;
 
 import java.io.IOException;
+import java.util.Optional;
 
 import com.github.mozvip.theaudiodb.model.AudioDbResponse;
 
@@ -44,12 +45,12 @@ public class TheAudioDbClient {
 		service = retrofit.create(TheAudioDbService.class);		
 	}
 
-	public AudioDbResponse searchArtist(String artistName) throws IOException {
-		return service.searchArtist(apiKey, artistName).execute().body();
+	public Optional<AudioDbResponse> searchArtist(String artistName) throws IOException {
+		return Optional.ofNullable( service.searchArtist(apiKey, artistName).execute().body() );
 	}
 
-	public AudioDbResponse searchAlbum(String artistName, String albumName) throws IOException {
-		return service.searchAlbum(apiKey, artistName, albumName).execute().body();
+	public Optional<AudioDbResponse> searchAlbum(String artistName, String albumName) throws IOException {
+		return Optional.ofNullable( service.searchAlbum(apiKey, artistName, albumName).execute().body() );
 	}
 
 	public AudioDbResponse searchAlbums(String artistName) throws IOException {
