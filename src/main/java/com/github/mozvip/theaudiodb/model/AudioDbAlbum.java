@@ -13,6 +13,7 @@ public class AudioDbAlbum {
 	private String strAlbum;
 	private String strAlbumCDart;
 	private String strAlbumSpine;
+	private String strAlbumStripped;
 	private String strAlbumThumb;
 	private String strAlbumThumbBack;
 	private String strAmazonID;
@@ -135,6 +136,14 @@ public class AudioDbAlbum {
 
 	public void setStrAlbumSpine(String strAlbumSpine) {
 		this.strAlbumSpine = strAlbumSpine;
+	}
+	
+	public String getStrAlbumStripped() {
+		return strAlbumStripped;
+	}
+	
+	public void setStrAlbumStripped(String strAlbumStripped) {
+		this.strAlbumStripped = strAlbumStripped;
 	}
 
 	public String getStrAlbumThumb() {
