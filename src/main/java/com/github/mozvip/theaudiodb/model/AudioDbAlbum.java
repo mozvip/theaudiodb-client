@@ -18,6 +18,7 @@ public class AudioDbAlbum {
 	private String strAlbumThumbBack;
 	private String strAmazonID;
 	private String strArtist;
+	private String strArtistStripped;
 
 	private String strDescription;
 	private String strDescriptionCN;
@@ -176,6 +177,14 @@ public class AudioDbAlbum {
 
 	public void setStrArtist(String strArtist) {
 		this.strArtist = strArtist;
+	}
+	
+	public String getStrArtistStripped() {
+		return strArtistStripped;
+	}
+	
+	public void setStrArtistStripped(String strArtistStripped) {
+		this.strArtistStripped = strArtistStripped;
 	}
 
 	public String getStrDescription() {
