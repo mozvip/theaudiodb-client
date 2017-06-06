@@ -11,6 +11,7 @@ public class AudioDbArtist {
 
 	private Integer intMembers;
 	private String strArtist;
+	private String strArtistStripped;
 	private String strArtistAlternate;
 	private String strArtistBanner;
 	private String strArtistFanart;
@@ -90,6 +91,12 @@ public class AudioDbArtist {
 	}
 	public void setStrArtist(String strArtist) {
 		this.strArtist = strArtist;
+	}
+	public String getStrArtistStripped() {
+		return strArtistStripped;
+	}
+	public void setStrArtistStripped(String strArtistStripped) {
+		this.strArtistStripped = strArtistStripped;
 	}
 	public String getStrArtistAlternate() {
 		return strArtistAlternate;
