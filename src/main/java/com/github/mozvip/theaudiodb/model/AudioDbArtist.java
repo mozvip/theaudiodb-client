@@ -1,5 +1,9 @@
 package com.github.mozvip.theaudiodb.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+@JsonInclude(Include.NON_NULL)
 public class AudioDbArtist {
 	
 	private Long idArtist;
