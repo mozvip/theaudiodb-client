@@ -3,6 +3,7 @@ package com.github.mozvip.theaudiodb;
 import java.io.IOException;
 import java.util.Optional;
 
+import com.github.mozvip.theaudiodb.model.AudioDbAlbum;
 import com.github.mozvip.theaudiodb.model.AudioDbResponse;
 
 import retrofit2.Retrofit;
@@ -49,8 +50,9 @@ public class TheAudioDbClient {
 		return Optional.ofNullable( service.searchArtist(apiKey, artistName).execute().body() );
 	}
 
-	public Optional<AudioDbResponse> searchAlbum(String artistName, String albumName) throws IOException {
-		return Optional.ofNullable( service.searchAlbum(apiKey, artistName, albumName).execute().body() );
+	public Optional<AudioDbAlbum> searchAlbum(String artistName, String albumName) throws IOException {
+		AudioDbResponse body = service.searchAlbum(apiKey, artistName, albumName).execute().body();
+		return Optional.ofNullable( body.getAlbum() != null ? body.getAlbum().get(0) : null );
 	}
 
 	public AudioDbResponse searchAlbums(String artistName) throws IOException {
