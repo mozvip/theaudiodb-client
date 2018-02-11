@@ -1,5 +1,11 @@
 package com.github.mozvip.theaudiodb.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+@JsonInclude(Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class AudioDbArtist {
 	
 	private Long idArtist;
@@ -11,11 +17,14 @@ public class AudioDbArtist {
 
 	private Integer intMembers;
 	private String strArtist;
+	private String strArtistStripped;
 	private String strArtistAlternate;
 	private String strArtistBanner;
+	private String strArtistClearart;
 	private String strArtistFanart;
 	private String strArtistFanart2;
 	private String strArtistFanart3;
+	private String strArtistWideThumb;
 	private String strArtistLogo;
 	private String strArtistThumb;
 
@@ -90,6 +99,12 @@ public class AudioDbArtist {
 	}
 	public void setStrArtist(String strArtist) {
 		this.strArtist = strArtist;
+	}
+	public String getStrArtistStripped() {
+		return strArtistStripped;
+	}
+	public void setStrArtistStripped(String strArtistStripped) {
+		this.strArtistStripped = strArtistStripped;
 	}
 	public String getStrArtistAlternate() {
 		return strArtistAlternate;
@@ -307,8 +322,19 @@ public class AudioDbArtist {
 	public void setStrWebsite(String strWebsite) {
 		this.strWebsite = strWebsite;
 	}
-	
-	
 
+	public String getStrArtistClearart() {
+		return strArtistClearart;
+	}
+	public void setStrArtistClearart(String strArtistClearart) {
+		this.strArtistClearart = strArtistClearart;
+	}
 
+	public String getStrArtistWideThumb() {
+		return strArtistWideThumb;
+	}
+
+	public void setStrArtistWideThumb(String strArtistWideThumb) {
+		this.strArtistWideThumb = strArtistWideThumb;
+	}
 }

@@ -1,5 +1,11 @@
 package com.github.mozvip.theaudiodb.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+@JsonInclude(Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class AudioDbAlbum {
 
 	private Long idAlbum;
@@ -13,10 +19,22 @@ public class AudioDbAlbum {
 	private String strAlbum;
 	private String strAlbumCDart;
 	private String strAlbumSpine;
+	private String strAlbumStripped;
 	private String strAlbumThumb;
 	private String strAlbumThumbBack;
-	private String strAmazonID;
+	private String strAllMusicID;
+
+    public String getStrAllMusicID() {
+        return strAllMusicID;
+    }
+
+    public void setStrAllMusicID(String strAllMusicID) {
+        this.strAllMusicID = strAllMusicID;
+    }
+
+    private String strAmazonID;
 	private String strArtist;
+	private String strArtistStripped;
 
 	private String strDescription;
 	private String strDescriptionCN;
@@ -136,6 +154,14 @@ public class AudioDbAlbum {
 	public void setStrAlbumSpine(String strAlbumSpine) {
 		this.strAlbumSpine = strAlbumSpine;
 	}
+	
+	public String getStrAlbumStripped() {
+		return strAlbumStripped;
+	}
+	
+	public void setStrAlbumStripped(String strAlbumStripped) {
+		this.strAlbumStripped = strAlbumStripped;
+	}
 
 	public String getStrAlbumThumb() {
 		return strAlbumThumb;
@@ -167,6 +193,14 @@ public class AudioDbAlbum {
 
 	public void setStrArtist(String strArtist) {
 		this.strArtist = strArtist;
+	}
+	
+	public String getStrArtistStripped() {
+		return strArtistStripped;
+	}
+	
+	public void setStrArtistStripped(String strArtistStripped) {
+		this.strArtistStripped = strArtistStripped;
 	}
 
 	public String getStrDescription() {
