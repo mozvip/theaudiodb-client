@@ -50,9 +50,8 @@ public class TheAudioDbClient {
 		return Optional.ofNullable( service.searchArtist(apiKey, artistName).execute().body() );
 	}
 
-	public Optional<AudioDbAlbum> searchAlbum(String artistName, String albumName) throws IOException {
-		AudioDbResponse body = service.searchAlbum(apiKey, artistName, albumName).execute().body();
-		return Optional.ofNullable( body.getAlbum() != null ? body.getAlbum().get(0) : null );
+	public Optional<AudioDbResponse> searchAlbum(String artistName, String albumName) throws IOException {
+		return Optional.ofNullable( service.searchAlbum(apiKey, artistName, albumName).execute().body() );
 	}
 
 	public AudioDbResponse searchAlbums(String artistName) throws IOException {
