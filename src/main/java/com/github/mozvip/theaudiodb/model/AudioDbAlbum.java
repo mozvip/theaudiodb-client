@@ -1,9 +1,11 @@
 package com.github.mozvip.theaudiodb.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 @JsonInclude(Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class AudioDbAlbum {
 
 	private Long idAlbum;
@@ -20,6 +22,7 @@ public class AudioDbAlbum {
 	private String strAlbumStripped;
 	private String strAlbumThumb;
 	private String strAlbumThumbBack;
+	private String strAlbumThumbHQ;
 	private String strAmazonID;
 	private String strArtist;
 	private String strArtistStripped;
@@ -34,6 +37,7 @@ public class AudioDbAlbum {
 	private String strDescriptionIL;
 	private String strDescriptionIT;
 	private String strDescriptionJP;
+
 	private String strDescriptionNL;
 	private String strDescriptionNO;
 	private String strDescriptionPL;
@@ -421,6 +425,14 @@ public class AudioDbAlbum {
 
 	public void setStrTheme(String strTheme) {
 		this.strTheme = strTheme;
+	}
+
+	public String getStrAlbumThumbHQ() {
+		return strAlbumThumbHQ;
+	}
+
+	public void setStrAlbumThumbHQ(String strAlbumThumbHQ) {
+		this.strAlbumThumbHQ = strAlbumThumbHQ;
 	}
 
 }
