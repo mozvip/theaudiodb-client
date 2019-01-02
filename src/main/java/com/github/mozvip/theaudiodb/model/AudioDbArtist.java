@@ -20,9 +20,11 @@ public class AudioDbArtist {
 	private String strArtistStripped;
 	private String strArtistAlternate;
 	private String strArtistBanner;
+	private String strArtistClearart;
 	private String strArtistFanart;
 	private String strArtistFanart2;
 	private String strArtistFanart3;
+	private String strArtistWideThumb;
 	private String strArtistLogo;
 	private String strArtistThumb;
 
@@ -320,8 +322,19 @@ public class AudioDbArtist {
 	public void setStrWebsite(String strWebsite) {
 		this.strWebsite = strWebsite;
 	}
-	
-	
 
+	public String getStrArtistClearart() {
+		return strArtistClearart;
+	}
+	public void setStrArtistClearart(String strArtistClearart) {
+		this.strArtistClearart = strArtistClearart;
+	}
 
+	public String getStrArtistWideThumb() {
+		return strArtistWideThumb;
+	}
+
+	public void setStrArtistWideThumb(String strArtistWideThumb) {
+		this.strArtistWideThumb = strArtistWideThumb;
+	}
 }

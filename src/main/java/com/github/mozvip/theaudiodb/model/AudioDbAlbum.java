@@ -23,6 +23,7 @@ public class AudioDbAlbum {
 	private String strAlbumThumb;
 	private String strAlbumThumbBack;
 	private String strAlbumThumbHQ;
+    private String strAllMusicID;
 	private String strAmazonID;
 	private String strArtist;
 	private String strArtistStripped;
@@ -37,7 +38,6 @@ public class AudioDbAlbum {
 	private String strDescriptionIL;
 	private String strDescriptionIT;
 	private String strDescriptionJP;
-
 	private String strDescriptionNL;
 	private String strDescriptionNO;
 	private String strDescriptionPL;
@@ -435,4 +435,11 @@ public class AudioDbAlbum {
 		this.strAlbumThumbHQ = strAlbumThumbHQ;
 	}
 
+    public String getStrAllMusicID() {
+        return strAllMusicID;
+    }
+
+    public void setStrAllMusicID(String strAllMusicID) {
+        this.strAllMusicID = strAllMusicID;
+    }
 }
